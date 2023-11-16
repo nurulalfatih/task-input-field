@@ -1,12 +1,19 @@
+import Navbar from "@component/navbar/navbar"
+import "@styles/global.css"
+
 export const metadata = {
   title: 'Input Field App',
-  description: 'Tugas',
+  description: 'Banner',
 }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Navbar/>
+        {children}
+      </body>
+
     </html>
   )
 }
