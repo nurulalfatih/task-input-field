@@ -8,6 +8,7 @@ export default function Home() {
 
   const [input, setInput] = useState('')
   const [nama, setNama] = useState('Nurul Alfatih Khumaera Azzahra H')
+  const [kosong, setKosong] = useState('true')
 
 
   const handlerGantiNama = () => {
@@ -16,10 +17,28 @@ export default function Home() {
 
   const handlerInput = (val) => {
     setInput(val);
+    setKosong(val.trim() === '');
   }
 
   function enterButton(e) {
-    if (e.code == "Enter") handlerGantiNama();
+    if (e.key == "Enter") handlerGantiNama();
+  }
+
+  let content;
+  if (kosong) {
+    content = (
+      <button className="cta active">
+        <p>Change Your Name</p>
+      </button>
+    );
+  } else {
+    content = (
+      <button className="cta" onClick={() => {
+        handlerGantiNama();
+      }}>
+      <p>Change Your Name</p>
+    </button>
+    );
   }
 
   return (
@@ -49,11 +68,7 @@ export default function Home() {
               enterButton(value)
             }}
           ></input>
-          <button onClick={() => {
-              handlerGantiNama();
-            }}>
-            <p>Change Name</p>
-          </button>
+          {content}
         </div>
       </div>
     </>

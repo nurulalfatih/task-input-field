@@ -68,8 +68,14 @@ p {
 
 .cta {
   margin-top: 20px;
-  width: 100%;
-  
+  width: 100%; 
+}
+
+.cta.active {
+  background-color: #e2e3e6;
+  color: #413d39;
+  cursor: no-drop;
+  font-weight: 700;
 }
 
 input{
