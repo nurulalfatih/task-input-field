@@ -56,7 +56,7 @@ export default function Home() {
             <h1>{nama}</h1>
             <div className="bio">
               <p>D121211008</p>
-              <p>Teknik Informatika</p>
+              <p>S1 Teknik Informatika</p>
             </div>
           </div>
         </div>
