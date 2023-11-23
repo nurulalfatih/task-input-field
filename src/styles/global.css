@@ -16,6 +16,9 @@
     align-items: center;
     justify-content: center;
     background-color: gray;
-    /* row-gap: 32px; */
+    row-gap: 32px;
+
+    padding-top: 60px;
+    overflow-x: hidden;
   }
 

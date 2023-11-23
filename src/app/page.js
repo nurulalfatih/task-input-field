@@ -5,7 +5,6 @@ import Image from 'next/image'
 import "@styles/home.css"
 
 export default function Home() {
-
   const [input, setInput] = useState('')
   const [nama, setNama] = useState('Nurul Alfatih Khumaera Azzahra H')
   const [kosong, setKosong] = useState('true')
@@ -62,7 +61,7 @@ export default function Home() {
         </div>
         <div className="cta">
           <input
-            placeholder='Add Your Name'
+            style={{marginTop: '12px'}} placeholder='Add Your Name'
             onInput={(val) => handlerInput(val.target.value)}
             onKeyDown={(value) => {
               enterButton(value)

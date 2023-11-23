@@ -9,13 +9,13 @@ const Navbar = () => {
     const pathname = usePathname()
     return (
         <div className="navbar-container"> 
-            <Link classname={'navbar-text ${pathname === "/" ? "active" : "default"}'} href="/">
+            <Link className={`navbar-text ${pathname === "/" ? 'active' : 'default'}`} href="/">
                 Home
             </Link>
         
             <p>|</p>
 
-            <Link classname={'link ${pathname === "/diary" ? "active" : ""}'} href="/diary">
+            <Link className={`navbar-link ${pathname === "/diary" ? 'active' : 'default'}`} href="/diary">
                 Fetch
             </Link>
         </div>
