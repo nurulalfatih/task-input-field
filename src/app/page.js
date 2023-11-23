@@ -28,7 +28,7 @@ export default function Home() {
   if (kosong) {
     content = (
       <button className="cta active">
-        <p>Change Your Name</p>
+        <p>Disabled</p>
       </button>
     );
   } else {
